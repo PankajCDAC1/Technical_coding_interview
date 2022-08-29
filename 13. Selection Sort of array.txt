@@ -1,0 +1,32 @@
+public class SelectionSorting {
+    public static void main(String args[]) {
+        int A[] = {5, 1, 4, 8, 10, 3};
+        int n = 6;
+        //for unsorted Array
+        System.out.println("Unsorted Array");
+        for (int i = 0; i < n; i++) {
+            System.out.print(A[i] + " ");
+        }
+        //for Selection Sort
+        int min;
+
+        for(int i=0; i<n-1; i++){
+            min=i;
+            for(int j=i+1; j<n; j++){
+                if(A[j]<A[min]){
+                    min = j;
+                }
+                //swap of min and A[i]
+                int temp = A[i];
+                A[i]=A[min];
+                A[min]= temp;
+            }
+        }
+        System.out.println("\n__________________________________________");
+        System.out.println("\nsorted Array");
+        for (int i = 0; i < n; i++) {
+            System.out.print(A[i] + " ");
+        }
+
+    }
+}

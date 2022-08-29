@@ -1,0 +1,47 @@
+import java.lang.*;
+public class Quick_Sort {
+    static  void quicksort(int A[],int low ,int high){
+        int mid=(low+high)/2;
+        int i = low;
+        int j = high;
+        int pivot=A[mid];
+        while(i<=j){
+            while (A[i] < pivot) {
+                i++;
+                System.out.println(i);
+            }
+            while (A[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                int temp = A[i];
+                A[i] = A[j];
+                A[j] = temp;
+                i++;
+                j--;
+            }
+        }
+       if(low<j)
+     quicksort(A,low,j);
+
+              if(high>i)
+            quicksort(A,i,high);
+
+    }
+
+    public static void main(String args[]) {
+        int A[] =  { 5, 4, 8, 10, 3, 9,1 };
+
+        //for unsorted Array
+        System.out.println("Unsorted Array");
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
+        }
+  quicksort(A,0, A.length-1);
+        System.out.println("\nsorted Array");
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
+
+
+        }
+}}

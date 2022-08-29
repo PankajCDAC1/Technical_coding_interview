@@ -1,0 +1,55 @@
+ public class cdac {
+    public static class Cdac{
+    void mca(){
+            System.out.println("Parent Class");
+        }
+        void abc(){
+            System.out.println("abc");
+        }
+
+
+    }
+    public static class Pankaj extends Cdac{
+        void mca(){
+            System.out.println("Base Class");
+        }
+       void xyz(){
+            System.out.println("xyz");
+        }
+    }
+    public static void main(String[] args){
+      //  Cdac obj = new Cdac();
+        //obj.mca();
+        // obj.abc();
+        //if obj.xyz();    then compile time error
+        // Parent Class
+         // abc
+
+
+
+       //  Cdac obj = new Pankaj();
+         //obj.mca();
+         // obj.abc();
+       //if   obj.xyz();  then compile time error
+        // Base Class
+        // abc
+
+
+
+     //   Pankaj obj = new Cdac();
+       // obj.mca();
+        //compile time error
+
+
+
+        Pankaj obj = new Pankaj();
+        obj.mca();
+        obj.abc();
+        obj.xyz();
+        //Base Class
+        //abc
+        //xyz
+    }
+
+
+    }

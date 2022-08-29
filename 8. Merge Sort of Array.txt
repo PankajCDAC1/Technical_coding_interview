@@ -1,0 +1,61 @@
+public class mergesort {
+    static void merge(int A[],int mid , int low , int high) {
+        int i, j;
+        int B[] = new int[100];
+        i = low;
+        j = mid + 1;
+        int k = low;
+        while (i <= mid && j <= high) {
+            if (A[i] < A[j]) {
+                B[k] = A[i];
+                i++;
+                k++;
+            } else {
+                B[k] = A[j];
+                j++;
+                k++;
+            }
+
+        }
+        while (i <= mid) {
+            B[k] = A[i];
+            i++;
+            k++;
+
+        }
+        while (j <= high) {
+            B[k] = A[j];
+            j++;
+            k++;
+        }
+        for (int s = low; s <=high; s++) {
+            A[s] = B[s];
+        }
+    }
+
+
+            static void Mergesort(int A[], int low, int high){
+        int mid;
+        if(low<high){
+            mid = (low + high)/2;
+            Mergesort(A,low,mid);
+            Mergesort(A,mid+1,high);
+        merge(A, mid , low , high);
+        }
+
+
+            }
+    public static void main(String args[]){
+        int A[] =  { 5, 4, 8, 10, 3, 9,1 };
+
+        //for unsorted Array
+        System.out.println("Unsorted Array");
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
+        }
+        Mergesort(A,0,A.length-1);
+        System.out.println("\nsorted Array");
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
+    }
+}}
