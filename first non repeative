@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class first_non_repeative {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Enter the string");
+        String str = sc.nextLine();
+       int count = 0;
+        for(char i : str.toCharArray()){
+            if(str.indexOf(i)==str.lastIndexOf(i)){
+                System.out.println(" "+i);
+                break;
+            }
+        }
+
+        }
+    }
+
