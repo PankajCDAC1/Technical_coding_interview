@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Replace_word {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Enter the string");
+        String str = sc.nextLine();
+
+        Scanner ab = new Scanner(System.in);
+        System.out.println(" Enter the word of string");
+        String a = ab.nextLine();
+
+        Scanner cd = new Scanner(System.in);
+        System.out.println(" Enter the replace word to string");
+        String b = cd.nextLine();
+
+        int n = str.length();
+             str = str.replace(a,b);
+        System.out.println("After replacement of word " );
+        System.out.println(" "+str);
+        }
+
+
+    }
+
