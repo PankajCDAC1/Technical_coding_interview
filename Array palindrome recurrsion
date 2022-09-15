@@ -1,0 +1,21 @@
+public class Palindrome_array_recurrsion {
+    public static void main(String[] args) {
+        int[] a = {3,6};
+        int n = a.length;
+        if(palindrome(a,0,n-1)==1){
+            System.out.println("Array is palindrome");
+        }else{System.out.println("Array is not palindrome");}
+    }
+
+    static int palindrome(int[] a , int begin , int end ) {
+        if (begin >= end) {
+            return 1;
+        }
+        if (a[begin] == a[end]) {
+         return   palindrome(a, begin + 1, end - 1);
+        } else {
+            return 0;
+        }
+    }
+
+}
