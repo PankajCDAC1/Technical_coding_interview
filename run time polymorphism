@@ -1,0 +1,17 @@
+public class runtime_polymorphism {
+
+   static class A {
+        void run(){
+            System.out.println("Class A");
+        }
+    }
+   static class B extends A{
+        void run(){
+            System.out.println(" Class B");
+        }
+    }
+    public static void main(String[] args) {
+        A obj1 = new B();
+        obj1.run();
+    }
+}
