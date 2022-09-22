@@ -1,0 +1,25 @@
+public class min_remove{
+    public static void main(String[] args) {
+        int[] arr = {0,4,8,11,12,50,52,57,58,90,92,94,97};
+        int n = arr.length;
+        int min = 3;
+    int[] b = new int[n];
+    int k =0;
+    for(int i=0; i<n-1; i++){
+        int j= i+1;
+        if(arr[j]-arr[i]>min){
+            b[k] = arr[i];
+            k++;
+
+        }
+
+    }
+
+        for(int i=0; i<n; i++){
+            arr[i]=b[i];
+        }
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
